@@ -39,7 +39,7 @@ While you could install the Cjdns routing software in any AppVM, the benefit of 
 
 ##### Limitations:
 - The Cjdns-ProxyVM acts as a NAT-Gateway, so the Cjdns traffic between the ProxyVM and an AppVM is not encrypted. However, since this traffic is only within Qubes, it's probably acceptable for you. See https://github.com/cjdelisle/cjdns/blob/master/doc/nat-gateway.md for details.
-- Since the Cjdns-ProxyVM itself is also behind a NAT (of `sys-firewall` or `sys-net` VM), the Cjdns router won't connect to other Cjdns routers in your local network `automagically` (for details regarding `beacon mode` see: https://github.com/cjdelisle/cjdns/blob/master/doc/configure.md). So no 'zero-configuration' unfortunately and some additional `manual configuration` is required. However, not everybody needs this anyway and if so, this needs to be done only once for the ProxyVM and not every AppVM. 
+- Since the Cjdns-ProxyVM itself is also behind a NAT (of `sys-firewall` or `sys-net` VM), the Cjdns router won't connect to other Cjdns routers in your local network `automatically` (for details regarding `beacon mode` see: https://github.com/cjdelisle/cjdns/blob/master/doc/configure.md). So no 'zero-configuration' unfortunately and some additional `manual configuration` is required. However, not everybody needs this anyway and if so, this needs to be done only once for the ProxyVM and not every AppVM. 
 
 ### 1. Create a TemplateVM (cjdns-gw)
 We'll build Cjdns from the GitHub sources, which requires some additional packages. Best is if you `Clone` any of the default TemplateVMs that come with Qubes 4.0. This How-To uses `Debian 9 (stretch)` template to build Cjdns and run the ProxyVM.
